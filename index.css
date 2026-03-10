@@ -1,7 +1,29 @@
 *{
   font-family: 'Share Tech Mono', monospace !important;
+  overflow-x: hidden !important;
 }
-/* hover landing star */
+.profile {
+  width: 25%;
+}
+
+.introduction {
+  width: 50%;
+  font-size: 16px;
+}
+
+/* On small screens: stack and make widths full */
+@media (max-width: 991.98px) { /* Bootstrap lg breakpoint */
+
+  .profile,
+  .introduction {
+    width: 100% !important;
+  }
+}
+/* cover responsive */
+#cover{
+min-height: 100dvh;
+}
+/* hover landing start */
 #cover:hover {
     background-color:  #000 !important;
     color: #0d6efd !important;
@@ -72,28 +94,10 @@ body::before {
 
 /* container overlay used from about section through contact */
 .overlay-container {
-  background: rgba(0,0,0,0.5); /* darker shade but transparent */
-  /* half‑inch gap on each side across all breakpoints */
+  background: rgba(0,0,0,0.5); 
   padding: 4rem 0.5in;
-  margin: 0 auto;              /* center horizontally */
-  max-width: calc(100% - 1in); /* never touch the viewport edges */
-}
-
-.section-texture::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
-    url('./image/icpep.jpg');
-
-  background-size: cover;
-  background-position: center;
-
-  opacity: 0.40;        /* texture strength */
-  z-index: -1;          /* put behind all divs */
-  pointer-events: none; /* prevent blocking clicks */
+  margin: 0 auto;              
+  max-width: calc(100% - 1in); 
 }
 
 /* animation type start */
@@ -153,7 +157,6 @@ body::before {
   opacity: 0;
   transform: translateY(40px);
   filter: blur(6px);
-
   animation: advanceAction 6s ease forwards;
 }
 
@@ -181,7 +184,7 @@ body::before {
 /* original button/element glow used across layout */
 #check, .check {
   transition: all 0.3s ease;
-  border: 2px solid #0d6efd; /* primary-colored outline */
+  border: 2px solid #0d6efd; 
 }
 
 #check:hover, .check:hover {
