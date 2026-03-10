@@ -2,6 +2,15 @@
   font-family: 'Share Tech Mono', monospace !important;
   overflow-x: hidden !important;
 }
+#aboutMe {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.textFit{
+  word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 30px;
+}
 .profile {
   width: 25%;
 }
@@ -23,6 +32,16 @@
 #cover{
 min-height: 100dvh;
 }
+
+/* overlay container start */
+.overlay-container {
+  background: rgba(0,0,0,0.5); /* darker shade but transparent */
+  /* adequate gap on each side without triggering overflow */
+  padding: 4rem 1rem;
+  margin: 0 auto;              /* center horizontally */
+  max-width: 100%;             /* never exceed viewport width */
+}
+/* overlay container end */
 /* hover landing start */
 #cover:hover {
     background-color:  #000 !important;
