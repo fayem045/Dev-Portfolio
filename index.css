@@ -21,7 +21,7 @@
 }
 
 /* On small screens: stack and make widths full */
-@media (max-width: 991.98px) { /* Bootstrap lg breakpoint */
+@media (max-width: 991.98px) { 
 
   .profile,
   .introduction {
@@ -35,13 +35,13 @@ min-height: 100dvh;
 
 /* overlay container start */
 .overlay-container {
-  background: rgba(0,0,0,0.5); /* darker shade but transparent */
-  /* adequate gap on each side without triggering overflow */
+  background: rgba(0,0,0,0.5); 
   padding: 4rem 1rem;
-  margin: 0 auto;              /* center horizontally */
-  max-width: 100%;             /* never exceed viewport width */
+  margin: 0 auto;            
+  max-width: 100%;            
 }
 /* overlay container end */
+
 /* hover landing start */
 #cover:hover {
     background-color:  #000 !important;
@@ -87,10 +87,28 @@ body::before {
 /* Make images uniform: square shape, cropped */
 .project-img {
   width: 100%;      /* full card width */
-  height: 200px;    /* fixed height for all images */
+  height: 120px;    /* fixed height for all images */
   object-fit: cover; /* crop without stretching */
 }
+/* slider sstart */
+.project-slider{
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
 
+.project-slider::-webkit-scrollbar{
+  display: none;
+}
+
+.project-card{
+  min-width: 220px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+/* slider end */
 
 /* darkmode */
 @media (prefers-color-scheme: dark) {
