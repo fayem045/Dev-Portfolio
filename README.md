@@ -1,6 +1,6 @@
-# Personal Portfolio Website
+# Welcome to My Personal Portfolio Website
 
-A personal portfolio website that showcases projects, skills, and experience.  
+A portfolio website that showcases projects, skills, and experience.  
 The site emphasizes **responsive design** and a **modern, professional UI** to highlight technical work effectively.
 
 ## Technologies Used
