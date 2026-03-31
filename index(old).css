@@ -1,0 +1,589 @@
+*{
+  font-family: 'Share Tech Mono', monospace !important;
+  overflow-x: hidden !important;
+}
+#aboutMe {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.textFit{
+  word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 30px;
+}
+.profile {
+  width: 25%;
+}
+
+.introduction {
+  width: 50%;
+  font-size: 16px;
+}
+
+/* On small screens: stack and make widths full */
+@media (max-width: 991.98px) { 
+
+  .profile,
+  .introduction {
+    width: 100% !important;
+  }
+}
+/* cover responsive */
+#cover{
+min-height: 100dvh;
+}
+
+/* overlay container start */
+.overlay-container {
+  background: rgba(0,0,0,0.5); 
+  padding: 4rem 1rem;
+  margin: 0 auto;            
+  max-width: 100%;            
+}
+/* overlay container end */
+
+
+/* hover landing start */
+#cover:hover {
+    background-color:  #000 !important;
+    color: #0d6efd !important;
+    transition: 0.3s ease;
+}
+#cover:hover a.btn,
+#cover:hover #check {
+    color: #0d6efd !important;
+    border-color: #0d6efd !important;
+}
+/* hover landing end */
+
+/* bottom navbar container and indicator styling */
+#bottomNavbar .nav-link:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s, color 0.2s;
+  color: #0d6efd !important; 
+}
+
+#bottomNavbar .nav-link:active {
+  transform: scale(1.1);
+}
+
+/* navbar end */
+/* full-page background image with dark overlay */
+body {
+  background: url('https://media.giphy.com/media/sRFEa8lbeC7zbcIZZR/giphy.gif') center/cover fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Make images uniform: square shape, cropped */
+.project-img {
+  width: 100%;      /* full card width */
+  height: 120px;    /* fixed height for all images */
+  object-fit: cover; /* crop without stretching */
+}
+/* slider sstart */
+.project-slider{
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.project-slider::-webkit-scrollbar{
+  display: none;
+}
+
+.project-card{
+  min-width: 220px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+/* slider end */
+
+/* darkmode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+
+  .card {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+  }
+}
+
+/* SECTION BACKGROUND TEXTURE */
+.section-texture {
+  position: relative;
+  z-index: 1;
+}
+
+/* container overlay used from about section through contact */
+.overlay-container {
+  background: rgba(0,0,0,0.5); 
+  padding: 4rem 0.5in;
+  margin: 0 auto;              
+  max-width: calc(100% - 1in); 
+}
+
+/* animation type start */
+.line{
+  display:inline-block;
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:2px solid white;
+  font-size:80px;
+
+  animation:typewriter 4s steps(24) 1s both,
+           blinkCursor 0.7s infinite;
+}
+
+@keyframes typewriter{
+  from{ width:0 }
+  to{ width:100% }
+}
+
+@keyframes blinkCursor{
+  50%{ border-color:transparent }
+}
+/* animation type end */
+
+/* animation roll start*/
+.circuit{
+  font-size:80px;
+  font-weight:bold;
+
+  fill:#0d6efd;           /* solid text color (blue) */
+
+  stroke:rgb(105, 209, 250);           /* dashed moving color */
+  stroke-width:4;
+
+  stroke-dasharray:10 10; /* dash pattern */
+  stroke-dashoffset:0;
+
+  filter: drop-shadow(0 0 3px #0d6efd)
+          drop-shadow(0 0 5px #0d6efd);
+
+  animation:circuitMove 2s linear infinite;
+}
+
+@keyframes circuitMove{
+  to{
+    stroke-dashoffset:-20;
+  }
+}
+/* animation roll end */
+
+/* stoic anim start */
+.stoic-text{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(255, 253, 253);
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(6px);
+  animation: advanceAction 6s ease forwards;
+}
+
+@keyframes advanceAction{
+  0%{
+    opacity:0;
+    transform: translateY(40px);
+    filter: blur(6px);
+  }
+
+  50%{
+    opacity:0.5;
+    transform: translateY(0);
+    filter: blur(3px);
+  }
+
+  100%{
+    opacity:1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+/* stoic anim end */
+
+/* original button/element glow used across layout */
+#check, .check {
+  transition: all 0.3s ease;
+  border: 2px solid #0d6efd; 
+}
+
+#check:hover, .check:hover {
+  box-shadow: 0 0 15px #0d6efd, 0 0 30px #0d6efd;
+  transform: translateY(-3px);
+}
+/* responsive start */
+#cover-title{
+  font-size: 5rem;
+}
+
+.stoic-text{
+  font-size: 2rem;
+}
+
+@media (max-width: 992px){
+  #cover-title{
+    font-size: 3.5rem;
+  }
+  .stoic-text{
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px){
+  #cover-title{
+    font-size: 2.5rem;
+  }
+  .stoic-text{
+    font-size: 1.2rem;
+  }
+}
+/* responsive end */
+
+/* Tools start */
+.tool-card{
+    position: relative;
+    width: 100%;           
+    padding-top: 100%; 
+}
+
+.tool-inner{
+    position: absolute;
+    top:0; right:0; bottom:0; left:0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s, opacity 0.6s;
+    transform-style: preserve-3d;
+}
+
+.tool-front,
+.tool-back-container{
+    position: absolute;
+    top:0; right:0; bottom:0; left:0;
+}
+
+.tool-front{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.tool-front img{
+    max-width:80%;
+    max-height:80%;
+    object-fit:contain;
+}
+
+.tool-back-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.8);
+    backface-visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.6s;
+    transform: rotateY(180deg);
+}
+
+.tool-back {
+    display: flex;      
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    overflow-y: auto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+    word-break: break-word;        
+    hyphens: auto;
+    width: 100%;
+    height: 100%;
+}
+  
+/* flip on hover - hide front and reveal back */
+.tool-card:hover .tool-inner{
+    opacity: 0;
+    transform: rotateY(180deg);
+}
+.tool-card:hover .tool-back-container{
+    opacity: 1;
+    visibility: visible;
+    transform: rotateY(0deg);
+}
+
+/* hover lift */
+.tools:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(47, 162, 245, 0.4);
+}
+
+/* responsive icon scaling */
+
+@media (max-width:575px){
+.tools{
+    max-height:80px;
+    padding:15px !important;
+}
+.circuit{
+    font-size:40px;
+}
+}
+
+@media (min-width:576px) and (max-width:991px){
+.tools{
+    max-height:95px;
+}
+}
+
+@media (min-width:1200px){
+.tools{
+    max-height:120px;
+}
+}
+/* Tools end */
+
+/* Projects start */
+
+/* .timeline-section{
+background:#f8f9fa;
+padding:80px 0;
+} */
+
+/* vertical line */
+
+.timeline{
+position:relative;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+top:0;
+left:50%;
+transform:translateX(-50%);
+width:3px;
+height:100%;
+background:#0d6efd;
+}
+
+/* timeline item */
+
+.timeline-item{
+position:relative;
+margin-bottom:60px;
+}
+
+/* circle node */
+
+.timeline-dot{
+position:absolute;
+left:50%;
+top:15px;
+transform:translateX(-50%);
+width:16px;
+height:16px;
+background:#0d6efd;
+border-radius:50%;
+box-shadow:0 0 0 4px white;
+}
+
+/* cards */
+
+.timeline-card{
+background:#212529;
+border-radius:10px;
+padding:25px;
+border-left:4px solid #0d6efd;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:all .3s ease;
+}
+
+.timeline-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(13,110,253,.15);
+}
+
+/* date badge */
+
+.timeline-date{
+background:#0d6efd;
+color:white;
+font-size:13px;
+padding:5px 12px;
+border-radius:50px;
+display:inline-block;
+margin-bottom:10px;
+}
+
+/* titles */
+
+.timeline-title{
+font-weight:600;
+font-size:20px;
+margin-bottom:10px;
+}
+
+/* alternating sides */
+
+.timeline-left{
+text-align:right;
+padding-right:60px;
+}
+
+.timeline-right{
+padding-left:60px;
+}
+
+/* responsive */
+
+@media (max-width:768px){
+
+.timeline::before{
+left:20px;
+}
+
+.timeline-dot{
+left:20px;
+}
+
+.timeline-left,
+.timeline-right{
+text-align:left;
+padding-left:60px;
+padding-right:0;
+}
+
+}
+/* for flip hover of my cards*/
+.timeline-card{
+perspective:1000px;
+cursor:pointer;
+}
+
+.flip-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform .7s;
+transform-style:preserve-3d;
+}
+
+.timeline-card:hover .flip-inner{
+transform:rotateY(180deg);
+}
+
+.flip-front,
+.flip-back{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+background:white;
+border-radius:10px;
+padding:25px;
+border-left:4px solid #0d6efd;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.flip-back{
+transform:rotateY(180deg);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.flip-back img{
+max-width:100%;
+border-radius:8px;
+}
+/* Project End */
+
+/* Hover line start*/
+.hover-line {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.hover-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #0d6efd; /* Bootstrap primary */
+  
+  transform: scaleX(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+
+.hover-line:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-line:hover::after {
+  transform: scaleX(1);
+  box-shadow: 5px 5px 10px rgba(13,110,253,0.7);
+}
+/* Hoverline end */
+
+/* TYPEWRITER EFFECT */
+
+.line{
+  overflow:hidden;
+  border-right:3px solid #0d6efd;
+  white-space:nowrap;
+}
+
+.anim-typewriter{
+  animation:
+    typewriter 3s steps(40) 1s 1 normal both,
+    blinkCursor 700ms steps(40) infinite normal;
+}
+
+@keyframes typewriter{
+  from{ width:0; }
+  to{ width:100%; }
+}
+
+@keyframes blinkCursor{
+  from{ border-right-color:#0d6efd; }
+  to{ border-right-color:transparent; }
+}
+/* typewritter ef end */
+
+/* rush modal design start */
+
+.modal-content,
+.modal-content .modal-header,
+.modal-content .modal-body,
+.modal-content .modal-footer {
+  background-color: #161616 !important;
+  color: #fff !important;
+}
+
+.modal-title {
+  color: #0d6efd;
+}
+/* rush modal design end */

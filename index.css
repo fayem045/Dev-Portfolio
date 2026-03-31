@@ -1,72 +1,16 @@
-*{
-  font-family: 'Share Tech Mono', monospace !important;
-  overflow-x: hidden !important;
-}
-#aboutMe {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-.textFit{
-  word-wrap: break-word;
-    overflow-wrap: break-word;
-    font-size: 30px;
-}
-.profile {
-  width: 25%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.introduction {
-  width: 50%;
-  font-size: 16px;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Share Tech Mono', monospace;
 }
 
-/* On small screens: stack and make widths full */
-@media (max-width: 991.98px) { 
 
-  .profile,
-  .introduction {
-    width: 100% !important;
-  }
-}
-/* cover responsive */
-#cover{
-min-height: 100dvh;
-}
-
-/* overlay container start */
-.overlay-container {
-  background: rgba(0,0,0,0.5); 
-  padding: 4rem 1rem;
-  margin: 0 auto;            
-  max-width: 100%;            
-}
-/* overlay container end */
-
-/* hover landing start */
-#cover:hover {
-    background-color:  #000 !important;
-    color: #0d6efd !important;
-    transition: 0.3s ease;
-}
-#cover:hover a.btn,
-#cover:hover #check {
-    color: #0d6efd !important;
-    border-color: #0d6efd !important;
-}
-/* hover landing end */
-
-/* bottom navbar container and indicator styling */
-#bottomNavbar .nav-link:hover {
-  transform: scale(1.2);
-  transition: transform 0.2s, color 0.2s;
-  color: #0d6efd !important; 
-}
-
-#bottomNavbar .nav-link:active {
-  transform: scale(1.1);
-}
-
-/* navbar end */
 /* full-page background image with dark overlay */
 body {
   background: url('https://media.giphy.com/media/sRFEa8lbeC7zbcIZZR/giphy.gif') center/cover fixed;
@@ -79,85 +23,11 @@ body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
   z-index: -1;
   pointer-events: none;
 }
-
-/* Make images uniform: square shape, cropped */
-.project-img {
-  width: 100%;      /* full card width */
-  height: 120px;    /* fixed height for all images */
-  object-fit: cover; /* crop without stretching */
-}
-/* slider sstart */
-.project-slider{
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 10px 0;
-}
-
-.project-slider::-webkit-scrollbar{
-  display: none;
-}
-
-.project-card{
-  min-width: 220px;
-  scroll-snap-align: start;
-  flex-shrink: 0;
-}
-/* slider end */
-
-/* darkmode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #f0f0f0;
-  }
-
-  .card {
-    background-color: #1c1c1c;
-    color: #f0f0f0;
-  }
-}
-
-/* SECTION BACKGROUND TEXTURE */
-.section-texture {
-  position: relative;
-  z-index: 1;
-}
-
-/* container overlay used from about section through contact */
-.overlay-container {
-  background: rgba(0,0,0,0.5); 
-  padding: 4rem 0.5in;
-  margin: 0 auto;              
-  max-width: calc(100% - 1in); 
-}
-
-/* animation type start */
-.line{
-  display:inline-block;
-  white-space:nowrap;
-  overflow:hidden;
-  border-right:2px solid white;
-  font-size:80px;
-
-  animation:typewriter 4s steps(24) 1s both,
-           blinkCursor 0.7s infinite;
-}
-
-@keyframes typewriter{
-  from{ width:0 }
-  to{ width:100% }
-}
-
-@keyframes blinkCursor{
-  50%{ border-color:transparent }
-}
-/* animation type end */
+/* end body bg */
 
 /* animation roll start*/
 .circuit{
@@ -185,76 +55,6 @@ body::before {
 }
 /* animation roll end */
 
-/* stoic anim start */
-.stoic-text{
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  color: rgb(255, 253, 253);
-  opacity: 0;
-  transform: translateY(40px);
-  filter: blur(6px);
-  animation: advanceAction 6s ease forwards;
-}
-
-@keyframes advanceAction{
-  0%{
-    opacity:0;
-    transform: translateY(40px);
-    filter: blur(6px);
-  }
-
-  50%{
-    opacity:0.5;
-    transform: translateY(0);
-    filter: blur(3px);
-  }
-
-  100%{
-    opacity:1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-/* stoic anim end */
-
-/* original button/element glow used across layout */
-#check, .check {
-  transition: all 0.3s ease;
-  border: 2px solid #0d6efd; 
-}
-
-#check:hover, .check:hover {
-  box-shadow: 0 0 15px #0d6efd, 0 0 30px #0d6efd;
-  transform: translateY(-3px);
-}
-/* responsive start */
-#cover-title{
-  font-size: 5rem;
-}
-
-.stoic-text{
-  font-size: 2rem;
-}
-
-@media (max-width: 992px){
-  #cover-title{
-    font-size: 3.5rem;
-  }
-  .stoic-text{
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 576px){
-  #cover-title{
-    font-size: 2.5rem;
-  }
-  .stoic-text{
-    font-size: 1.2rem;
-  }
-}
-/* responsive end */
 
 /* Tools start */
 .tool-card{
@@ -317,7 +117,8 @@ body::before {
     width: 100%;
     height: 100%;
 }
-  
+
+
 /* flip on hover - hide front and reveal back */
 .tool-card:hover .tool-inner{
     opacity: 0;
@@ -328,45 +129,10 @@ body::before {
     visibility: visible;
     transform: rotateY(0deg);
 }
-
-/* hover lift */
-.tools:hover{
-    transform:translateY(-8px);
-    box-shadow:0 12px 25px rgba(47, 162, 245, 0.4);
-}
-
-/* responsive icon scaling */
-
-@media (max-width:575px){
-.tools{
-    max-height:80px;
-    padding:15px !important;
-}
-.circuit{
-    font-size:40px;
-}
-}
-
-@media (min-width:576px) and (max-width:991px){
-.tools{
-    max-height:95px;
-}
-}
-
-@media (min-width:1200px){
-.tools{
-    max-height:120px;
-}
-}
 /* Tools end */
 
-/* Projects start */
 
-/* .timeline-section{
-background:#f8f9fa;
-padding:80px 0;
-} */
-
+/* experience design */
 /* vertical line */
 
 .timeline{
@@ -455,7 +221,6 @@ padding-left:60px;
 /* responsive */
 
 @media (max-width:768px){
-
 .timeline::before{
 left:20px;
 }
@@ -470,109 +235,54 @@ text-align:left;
 padding-left:60px;
 padding-right:0;
 }
-
-}
-/* for flip hover of my cards*/
-.timeline-card{
-perspective:1000px;
-cursor:pointer;
+/* Experience Design end */
 }
 
-.flip-inner{
-position:relative;
-width:100%;
-height:100%;
-transition:transform .7s;
-transform-style:preserve-3d;
-}
 
-.timeline-card:hover .flip-inner{
-transform:rotateY(180deg);
-}
-
-.flip-front,
-.flip-back{
-position:absolute;
-width:100%;
-height:100%;
-backface-visibility:hidden;
-background:white;
-border-radius:10px;
-padding:25px;
-border-left:4px solid #0d6efd;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.flip-back{
-transform:rotateY(180deg);
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.flip-back img{
-max-width:100%;
-border-radius:8px;
-}
-/* Project End */
-
-/* Hover line start*/
-.hover-line {
-  position: relative;
+/* animation typewritter start */
+.typewriter {
   display: inline-block;
-  padding-bottom: 5px;
-}
+  width: fit-content;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(25, 28, 28);
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: clamp(3rem, 5vw, 4rem);
 
-.hover-line::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: #0d6efd; /* Bootstrap primary */
-  
-  transform: scaleX(0);
-  transform-origin: top;
-  transition: transform 0.3s ease;
-}
-
-.hover-line:hover::after {
-  transform: scaleX(1);
-}
-
-.hover-line:hover::after {
-  transform: scaleX(1);
-  box-shadow: 5px 5px 10px rgba(13,110,253,0.7);
-}
-/* Hoverline end */
-
-/* TYPEWRITER EFFECT */
-
-.line{
-  overflow:hidden;
-  border-right:3px solid #0d6efd;
-  white-space:nowrap;
-}
-
-.anim-typewriter{
-  animation:
-    typewriter 3s steps(40) 1s 1 normal both,
-    blinkCursor 700ms steps(40) infinite normal;
+animation: typing 2s steps(11, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typewriter{
-  from{ width:0; }
-  to{ width:100%; }
+  from { width: 0 }
+  to   { width: 100% }
 }
 
-@keyframes blinkCursor{
-  from{ border-right-color:#0d6efd; }
-  to{ border-right-color:transparent; }
+@keyframes blink-caret {
+  50% { border-color: transparent; }
 }
-/* typewritter ef end */
+/* Typewritter end */
 
-/* rush modal design start */
+/* btn hover start */
+.btn:hover {
+  box-shadow: 0 0 10px #0d6efd, 0 0 20px #0d6efd !important; /* blue shadow */
+  transform: translateY(-2px); /* optional lift effect */
+}
+/* btn hover end */
+
+/* hover landing start */
+#cover:hover {
+    background-color:  #000 !important;
+    color: #0d6efd !important;
+    transition: 0.3s ease;
+}
+#cover:hover .btn,
+#cover:hover #check {
+    color: #0d6efd !important;
+    border-color: #0d6efd !important;
+}
+/* hover landing end */
+
+/* modal design start */
 
 .modal-content,
 .modal-content .modal-header,
@@ -585,4 +295,4 @@ border-radius:8px;
 .modal-title {
   color: #0d6efd;
 }
-/* rush modal design end */
+/* modal design end */
