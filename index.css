@@ -280,6 +280,14 @@ animation: typing 2s steps(11, end), blink-caret 0.75s step-end infinite;
     color: #0d6efd !important;
     border-color: #0d6efd !important;
 }
+
+/* hover h1 only start*/
+#cover-title h1:hover {
+  color: red !important;              /* change color on hover */
+  transform: scale(1.1);   /* slightly grow the text */
+  cursor: pointer;         /* optional: show pointer */
+}
+/* hoer h1 only end */
 /* hover landing end */
 
 /* modal design start */
