@@ -282,10 +282,15 @@ animation: typing 2s steps(11, end), blink-caret 0.75s step-end infinite;
 }
 
 /* hover h1 only start*/
+#cover-title h1 {
+  color: black;            /* default color */
+  transition: color 0.3s ease, transform 0.3s ease; /* smooth animation */
+}
+
 #cover-title h1:hover {
-  color: red !important;              /* change color on hover */
-  transform: scale(1.1);   /* slightly grow the text */
-  cursor: pointer;         /* optional: show pointer */
+  color: rgb(2, 141, 255) !important;              
+  transform: scale(1.1);  
+  cursor: pointer;    
 }
 /* hoer h1 only end */
 /* hover landing end */
