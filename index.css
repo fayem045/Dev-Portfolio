@@ -13,7 +13,7 @@
 
 /* full-page background image with dark overlay */
 body {
-  background: url('https://media.giphy.com/media/sRFEa8lbeC7zbcIZZR/giphy.gif') center/cover fixed;
+  background: url('./image/dark-black-background-geometric-design-diagonal-vector-illustration_677411-2780.jpg') center/cover fixed;
   background-size: cover;
   position: relative;
   z-index: 0;
