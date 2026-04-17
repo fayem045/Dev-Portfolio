@@ -1359,10 +1359,10 @@ Creation of hardware projects, such as a implementation of Integrated Circuit, a
 
   <div class="mb-3">
     <label class="form-label">Mobile Number</label>
-    <input type="tel" id="number"
+    <input type="text" id="number"
       name="number"
       class="form-control bg-dark text-light border-secondary"
-      placeholder="09xxxxxxxxx" required>
+      placeholder="09xxxxxxxxx"  inputmode="numeric" required>
   </div>
   
   <div class="mb-3">
@@ -1383,7 +1383,7 @@ Creation of hardware projects, such as a implementation of Integrated Circuit, a
       placeholder="Your message"></textarea>
   </div>
 
-  <button class="btn btn-primary w-100 fw-semibold" type="submit" onclick="sendEmail()">
+  <button class="btn btn-primary w-100 fw-semibold" type="submit">
     Send Message
   </button>
 
@@ -1441,13 +1441,13 @@ Creation of hardware projects, such as a implementation of Integrated Circuit, a
     <div class="modal-content bg-dark text-light border-primary">
 
       <div class="modal-header border-secondary">
-        <h5 class="modal-title">Message Sent</h5>
+        <h5 class="modal-title" id="modalTitle">Message Sent</h5>
         <button type="button" class="btn-close btn-close-white"
         data-bs-dismiss="modal"></button>
       </div>
 
       <div class="modal-body text-center">
-        <p class="mb-0">
+        <p class="mb-0" id="modalText">
           Thank you for contacting me! I will get back to you soon.
         </p>
       </div>
