@@ -249,7 +249,7 @@ padding-right:0;
   font-family: monospace;
   font-size: clamp(3rem, 5vw, 4rem);
 
-animation: typewriter 3s steps(11, end), blink-caret 0.75s;}
+animation: typewriter 3s steps(11, end), blink-caret 0.75s step-end infinite;}
 
 @keyframes typewriter{
   from { width: 0 }

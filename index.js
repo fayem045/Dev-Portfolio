@@ -10,7 +10,7 @@ function sendEmail(event) {
   const params = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
-    number: rawNumber,
+    number: document.getElementById("number").value,
     subject: document.getElementById("subject").value,
     message: document.getElementById("message").value
   };
