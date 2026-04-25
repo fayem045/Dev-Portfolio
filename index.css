@@ -28,7 +28,10 @@ body::before {
   pointer-events: none;
 }
 /* end body bg */
-
+.bg-opacity{
+  background-color: rgba(42, 42, 43, 0.8);
+  opacity: 0.8;
+}
 /* animation roll start*/
 .circuit{
   font-size:80px;
