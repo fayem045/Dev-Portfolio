@@ -17,8 +17,7 @@
 		<title>Developer Portfolio</title>
 
 	</head>
-	<body>
-
+<body>
         
         <!-- MAIN Landing Page Start -->
 
@@ -107,7 +106,7 @@
     <!-- ABOUT ME END -->
 
     <!-- TOOLS START -->
-<div class="d-flex p-3 p-md-5 flex-column align-items-center" id="tools">
+<div id="tools" class="d-flex p-3 p-md-5 flex-column align-items-center" >
 
 <svg viewBox="0 0 800 120">
   <text x="50%" y="50%" dy=".35em" text-anchor="middle" class="circuit">
@@ -468,7 +467,7 @@
     <!-- TOOLS END-->
 
     <!-- EXP Start -->
- <section class="timeline-section" id="experience">
+ <div id="experience" class="timeline-section" >
 
 <div class="container">
 
@@ -545,11 +544,11 @@ Creation of hardware projects, such as a implementation of Integrated Circuit, a
 </div>
 </div>
 
-</section>
+</div>
 <!-- EXP end -->
 
 <!-- Project Start -->
-<section class="py-5 project-section" id="projects">
+<div class="py-5 project-section" id="projects">
   <div class="container">
 
     <!-- Title -->
@@ -757,7 +756,7 @@ Creation of hardware projects, such as a implementation of Integrated Circuit, a
     </div>
 
   </div>
-</section>
+</div>
 <!-- Project End -->
 
 
@@ -1333,9 +1332,8 @@ Creation of hardware projects, such as a implementation of Integrated Circuit, a
                     </div>
                 </div> <!-- map column  end-->
                 <!-- form + socials column start -->
-                <div class="col-12 col-lg-6 mb-5 bg-dark">
-                  <div class="card shadow-lg p-4 bg-dark text-light border-primary rounded-4">
-
+                <div class="col-12 col-lg-6 mb-5">
+                  <div class="card shadow-lg p-4 bg-dark text-light border-primary rounded-4">   <!-- need new div then pasok si form -->
                     <h2 class="fw-bold mb-4 text-center">Contact Me</h2>
 
                   <form id="contact-form" onsubmit="sendEmail(event)">
@@ -1413,26 +1411,27 @@ Creation of hardware projects, such as a implementation of Integrated Circuit, a
   <div class="container d-flex justify-content-center">
     <div class="nav nav-pills rounded-pill border-primary bg-dark  bg-opacity-75 px-3 py-2">
       <a class="nav-link text-light px-3" href="#cover">
-        <i class="bi bi-house-fill fs-4"></i>
+      <i class="bi bi-house-fill fs-5"></i>
       </a>
       <a class="nav-link text-light px-3" href="#aboutMe">
-        <i class="bi bi-person-fill fs-4"></i>
+        <i class="bi bi-person-fill fs-5"></i>
       </a>
-      <a class="nav-link text-light px-3" href="#tools">
-        <i class="bi bi-tools fs-4"></i>
+      <a class="nav-link text-light px-3 active" href="#tools">
+          <i class="bi bi-tools fs-5"></i>
       </a>
       <a class="nav-link text-light px-3" href="#experience">
-        <i class="bi bi-briefcase-fill fs-4"></i>
+        <i class="bi bi-briefcase-fill fs-5"></i>
       </a>
             <a class="nav-link text-light px-3" href="#projects">
-        <i class="bi bi-folder-fill fs-4"></i>
+        <i class="bi bi-folder-fill fs-5"></i>
       </a>
       <a class="nav-link text-light px-3" href="#connect">
-        <i class="bi bi-envelope-fill fs-4"></i>
+        <i class="bi bi-envelope-fill fs-5"></i>
       </a>
     </div>
   </div>
 </nav>
+
 <!-- modal contact -->
 <div class="modal fade" id="contactModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">

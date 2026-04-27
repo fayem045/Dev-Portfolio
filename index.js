@@ -1,4 +1,29 @@
+// nav link start scroll
+const sections = document.querySelectorAll("div[id]");
+const navLinks = document.querySelectorAll(".nav-link");
 
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+
+          if (link.getAttribute("href") === "#" + entry.target.id) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  },
+  {
+    threshold: 0.4, // adjust for when highlight triggers
+  }
+);
+
+sections.forEach((section) => observer.observe(section));
+// nav-link end
+sections.forEach(section => observer.observe(section));
         (function(){
             emailjs.init({
               publicKey: "wN3-1Z9GHvFSoD0kZ",

@@ -9,8 +9,12 @@
   padding: 0;
   font-family: 'Share Tech Mono', monospace;
 }
-
-
+/* nav start scroll */
+.nav-link.active {
+  color: rgb(0, 140, 255);
+  font-weight: bold;
+}
+/* nav end scroll */
 /* full-page background image with dark overlay */
 body {
   background: url('./image/dark-black-background-geometric-design-diagonal-vector-illustration_677411-2780.jpg') center/cover fixed;
