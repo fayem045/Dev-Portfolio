@@ -9,6 +9,54 @@
   padding: 0;
   font-family: 'Share Tech Mono', monospace;
 }
+/* start light mode */
+body.light-mode footer,
+body.light-mode nav{
+  background: rgba(210, 237, 252, 0.627) !important;
+  color: #000 !important;
+}
+body.light-mode{
+  background: rgba(210, 237, 252, 0.627) !important;
+  color: #000;
+}
+
+/* remove dark overlay in light mode */
+body.light-mode::before {
+  background: url(./image/blue.jpg);
+}
+
+/* optional: make dark sections lighter */
+body.light-mode .bg-opacity {
+  background-color: rgba(210, 237, 252, 0.627);
+  opacity: 50.8;
+}
+/* COVER SECTION (landing page) */
+body.light-mode #cover {
+  background: rgba(210, 237, 252, 0.627) !important;
+  color: #000 !important;
+}
+
+/* ABOUT SECTION */
+body.light-mode #aboutMe {
+  background: rgba(210, 237, 252, 0.627) !important;
+  color: #000 !important;
+}
+body.light-mode .tool-card {
+  background: rgba(210, 237, 252, 0.627) !important;
+  color: #000 !important;
+}
+body.light-mode .tool-back-container,
+body.light-mode .tool-card p {
+  background: rgba(210, 237, 252, 0.627) !important;
+  color: #000 !important;
+}
+body.light-mode #aboutMe p,
+body.light-mode #aboutMe h2,
+body.light-mode #aboutMe h5 {
+  color: #000 !important;
+}
+/* end lightmode */
+
 /* nav start scroll */
 .nav-link.active {
   color: rgb(0, 140, 255);
