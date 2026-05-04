@@ -10,8 +10,7 @@
   font-family: 'Share Tech Mono', monospace;
 }
 /* start light mode */
-body.light-mode footer,
-body.light-mode nav{
+body.light-mode footer{
   background: rgba(210, 237, 252, 0.627) !important;
   color: #000 !important;
 }
@@ -53,6 +52,15 @@ body.light-mode .tool-card p {
 body.light-mode #aboutMe p,
 body.light-mode #aboutMe h2,
 body.light-mode #aboutMe h5 {
+  color: #000 !important;
+}
+
+body.light-mode .timeline-card {
+  background: rgba(210, 237, 252, 0.627) !important;
+  color: #000 !important;
+}
+body.light-mode .card-body {
+  background: rgba(253, 254, 255, 0.627) !important;
   color: #000 !important;
 }
 /* end lightmode */
