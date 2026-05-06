@@ -63,6 +63,15 @@ body.light-mode .card-body {
   background: rgba(253, 254, 255, 0.627) !important;
   color: #000 !important;
 }
+body.light-mode #bottomNavbar {
+  color: #000 !important;
+}
+body.light-mode #bottomNavbar .nav-link {
+  color: #000 !important;
+}
+body.light-mode #bottomNavbar .nav {
+  background: rgba(210, 237, 252, 0.8) !important;
+}
 /* end lightmode */
 
 /* nav start scroll */
