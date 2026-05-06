@@ -307,12 +307,12 @@ padding-right:0;
   display: inline-block;
   width: fit-content;
   overflow: hidden;
-  border-right: 0.15em solid rgb(25, 28, 28);
+  /* border-right: 0.15em solid rgb(25, 28, 28); */
   white-space: nowrap;
   font-family: monospace;
   font-size: clamp(3rem, 5vw, 4rem);
 
-animation: typewriter 3s steps(11, end), blink-caret 0.75s step-end infinite;}
+animation: typewriter 3s steps(30, end), blink-caret 0.75s step-end infinite;}
 
 @keyframes typewriter{
   from { width: 0 }
