@@ -69,8 +69,27 @@ body.light-mode #bottomNavbar {
 body.light-mode #bottomNavbar .nav-link {
   color: #000 !important;
 }
-body.light-mode #bottomNavbar .nav {
-  background: rgba(210, 237, 252, 0.8) !important;
+/* navbar oblong */
+body.light-mode #bottomNavbar .nav { 
+  background: rgba(181, 214, 232, 0.8) !important;
+}
+body.light-mode #contactForm .card {
+  background: rgba(181, 214, 232, 0.8) !important;
+  color: #000 !important;
+}
+body.light-mode #contactForm .form-control {
+  background:  rgba(232, 247, 255, 0.8) !important;
+  color: #000 !important;
+  border-color:  rgba(196, 230, 248, 0.8) !important;
+}
+body.light-mode #contactForm .form-label {
+  color: #000 !important;
+}
+body.light-mode #contactForm .text-center p {
+  color: #000 !important;
+}
+body.light-mode #contactForm .text-center a {
+  color: #0d6efd !important;
 }
 /* end lightmode */
 
